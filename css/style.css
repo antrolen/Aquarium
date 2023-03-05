@@ -1,0 +1,115 @@
+:root{
+    --box-color:linear-gradient(0deg, black 5%, indigo 25.5%, blue 50%, green 70%, yellow 100%);
+
+}
+
+.main-grid{
+    display: grid;
+/*    border: 3px solid red;*/
+    padding: 0px;
+    height: 90vh;
+    grid-template-areas: 
+        "hdr"
+        "."
+        "cnt"
+        "."
+        "ftr";
+    grid-template-columns: 
+        100%;
+    grid-template-rows: 
+    40px 2px
+    auto 2px
+    20px
+    ;
+}
+
+.container{
+/*    border: 3px solid green;*/
+/*    position: absolute;*/
+    grid-area: cnt;
+    position: relative;
+    background-color: aqua;
+/*    margin: 5px;*/
+    
+}
+
+.box{
+    width: 100px;
+    height: 80px;
+    margin: 1px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+    background: var(--box-color);
+    border: 1px solid black;  
+    border-radius: 0% 250% 200% 500%;
+}
+
+.box-fish{
+    width: 100px;
+    margin: 1px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.box:hover, .box-fish{
+    cursor: grab;
+}
+
+.header{
+    grid-area: hdr;
+/*    border: 1px solid black;*/
+    
+    box-shadow: 2px -2px 5px 1px gray, -2px -2px 5px 1px gray;
+    
+    background-color: chocolate;
+/*    height: 100%;*/
+    
+    display: grid;
+    grid-template-areas: 
+        "fcr . . . tmr";
+    grid-template-columns: 
+        30% auto auto auto 40%;
+    grid-template-rows: 
+    auto
+    ;
+    
+}
+
+.timer{
+    grid-area: tmr;
+}
+
+.fishcounter{
+    grid-area: fcr;
+}
+
+.timer, .fishcounter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+/*    border: 1px solid black;*/
+    
+    font-size: 2em;
+}
+
+
+.fishcounter p, .timer p{
+    height: 100%;
+/*    border: 1px solid green;*/
+}
+
+
+.footer{
+    grid-area: ftr;
+    border: 1px solid black;
+    background-color: darkslategray;
+    color: white;
+}
+
+
+
+
